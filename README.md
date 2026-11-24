@@ -1,5 +1,6 @@
-# Space-Shooter
-Space Shooter is a single-player 2D arcade game for Windows, built with C++17 and SFML 3 for a Programming Fundamentals semester project. Blast through three enemy formations, dodge incoming bombs, and reach score targets to advance. Choose any starting level, get three lives per level, and view your latest completed run's score from the main menu.
+# Space Shooter
+
+Space Shooter is a single-player 2D arcade game for Windows, built with C++17 and SFML 3 for a Programming Fundamentals semester project. Pilot your ship through three enemy formations, dodge falling bombs, and earn enough points to advance.
 
 ## Gameplay
 
@@ -31,14 +32,9 @@ The leaderboard shows your most recent completed run's score. Closing the game c
 
 ## Run on Windows
 
-If your download includes `build/game.exe`, open PowerShell in the folder containing `run.bat` and run:
+On 64-bit Windows 10 or 11, extract the entire ZIP and double-click `Play.bat` in the extracted project folder. The game comes with its runtime DLLs, so you can play without installing SFML or a compiler.
 
-```powershell
-cd .\build
-.\game.exe
-```
-
-Keep the runtime DLLs, `img/`, `font.otf`, and `font2.otf` in `build/`. The game loads its images and fonts relative to its working directory.
+Keep `Play.bat` next to the `build/` folder. The launcher starts the game from that folder so it can find its images and fonts.
 
 ## Build from source
 
@@ -56,7 +52,9 @@ Keep the runtime DLLs, `img/`, `font.otf`, and `font2.otf` in `build/`. The game
 | File or folder | Contents |
 | --- | --- |
 | `main.cpp` | Game loop, controls, menus, scoring, collisions, and level progression |
+| `Play.bat` | Launches the bundled Windows game |
 | `run.bat` | Windows build and launch script |
+| `build/game.exe` and DLLs | Prebuilt Windows game and its runtime libraries |
 | `build/img/` | Background, ship sprites, enemies, and projectiles |
 | `build/font.otf` and `build/font2.otf` | Fonts used by the game |
 
